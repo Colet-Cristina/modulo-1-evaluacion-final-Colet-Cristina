@@ -12,10 +12,15 @@ Proyecto de maquetación web responsive realizado durante el bootcamp de **Adala
 ## 🚀 Cómo ver el proyecto
 
 1. Instala las dependencias:
+
    ```bash
    npm install
-   Arranca el proyecto:
+
    ```
 
-Bash
-npm run dev
+2. Arranca el proyecto:
+
+   ```bash
+   npm run dev
+
+   ```
