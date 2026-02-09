@@ -1,0 +1,123 @@
+@use "../variables";
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../../image/cover.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 75% center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0%;
+  left: 0rem;
+  z-index: 2000;
+}
+
+.menu {
+  display: inline;
+  height: 2.5rem;
+  background-color: variables.$color-verde;
+}
+
+.shop {
+  margin: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  width: 90%; // Asegura que el texto no toque los bordes
+  font-family: variables.$fuente-principal;
+}
+
+.delusion {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  width: 90%;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scroll {
+  background-color: white;
+  border-radius: 50%;
+  width: 4rem;
+  height: 3.5rem;
+  padding: 0.5rem 0.5rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 45%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 1.5rem;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.history {
+  color: variables.$color-verde;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.sport {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.button-shop {
+  text-decoration: none;
+  color: variables.$color-verde;
+  border: 0.1rem solid variables.$color-verde;
+  padding: 0.6rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 40rem;
+  }
+
+  .menu {
+    height: 4rem;
+  }
+
+  .shop {
+    font-size: 6rem;
+    margin-right: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .delusion {
+    font-size: 3rem;
+    margin-right: 5rem;
+    margin-top: 0.5rem;
+  }
+
+  .content {
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: 50rem;
+    font-size: 1rem;
+  }
+}

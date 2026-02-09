@@ -1,0 +1,50 @@
+@use "../variables";
+.page {
+  background-color: variables.$color-gris-footer;
+  color: white;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+.arrow {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.5rem 0.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 45%;
+  top: -1rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.clothes,
+.social,
+.copy {
+  list-style-type: none;
+  line-height: 2;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: variables.$fuente-principal;
+  }
+}
+@media (min-width: 768px) {
+  .arrow {
+    left: 49%;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-around; // Distribuye las 3 columnas equitativamente
+    align-items: flex-start;
+    text-align: left;
+    gap: 0;
+  }
+}

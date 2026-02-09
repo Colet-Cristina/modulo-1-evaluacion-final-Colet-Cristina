@@ -1,0 +1,29 @@
+@use "../variables";
+// 1. Transición suave para los botones al pasar el ratón
+.button-shop,
+.button-now {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1); // Crece un poquito
+    cursor: pointer;
+  }
+}
+
+// 2. Animación de "salto" para la flecha del footer
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); // Sube 10px en el aire
+  }
+}
+
+.arrow,
+.scroll {
+  animation: jump 2s infinite ease-in-out;
+}

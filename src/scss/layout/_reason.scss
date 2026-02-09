@@ -1,0 +1,53 @@
+@use "../variables";
+.Reason {
+  display: grid;
+  grid-template-columns: 1fr; // Una columna en móvil
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: variables.$color-verde-fondo;
+  justify-items: center;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 18rem;
+}
+
+.img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.call {
+  font-size: 0.8rem;
+  color: #626262;
+  font-weight: bold;
+}
+
+.button-now {
+  text-decoration: none;
+  color: white;
+  background-color: variables.$color-verde;
+  border-radius: 9999px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .Reason {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5rem 2rem;
+
+    .list-item:first-child,
+    .button-now {
+      grid-column: 1 / -1;
+    }
+  }
+}
